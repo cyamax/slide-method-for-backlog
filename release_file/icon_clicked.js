@@ -9,7 +9,7 @@ function change_popup(tabid){
   chrome.tabs.get(tabid, function(tab){
     //console.log(tab.url);
     //backlogだけすスライドが作れるようにする
-    if (tab.url.match(/\.backlog\.jp\/wiki\//)) {
+    if (tab.url.match(/\.backlog\.(jp|com)\/wiki\//)) {
       chrome.browserAction.setIcon({'path':'on.png'});
       chrome.browserAction.setPopup({'popup':''}); //あえて空白。新規タブで表示させるために空白
     } else {

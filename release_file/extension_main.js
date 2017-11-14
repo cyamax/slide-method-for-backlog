@@ -102,8 +102,8 @@ $(function(){
     // console.log(value);
     document.title = value.data[0][1]; //ページタイトルを変更
     active_url = value.data[0][2];
-    // console.log(active_url);
-    fqdn_url = active_url.substring(0,active_url.indexOf("\.backlog\.jp\/"))+".backlog.jp";  //https://******.backlog.co.jpの形式でアドレスを抜き出す
+    fqdn_url = active_url.substring(0,active_url.indexOf("/",9));  //FQDNを取り出す
+    //console.log(fqdn_url);
     window.get(active_url, function(){
       //console.log(this.querySelector("#wikicard"));
       //var wiki_content = document.getElementById("markdown_text"); //slide_page.htmlの
